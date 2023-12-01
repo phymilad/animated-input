@@ -1,0 +1,42 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  color: white;
+  background-color: #222;
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+button::before {
+  content: "";
+  width: 300px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  transform: translateX(-150px) translateY(-20px) rotate(45deg);
+  background-color: white;
+  transition: all 1s;
+}
+
+button:hover::before {
+  transform: translateX(300px) translateY(-20px) rotate(45deg);
+}
+
+button:hover {
+  background-color: #ff2222;
+}

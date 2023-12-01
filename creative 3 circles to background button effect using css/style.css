@@ -1,0 +1,52 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+a {
+  /* background-color: white; */
+  color: yellow;
+  padding: 40px 80px;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+a::before,
+a::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+}
+
+a::before {
+  left: 0;
+  box-shadow: -100px 0 yellow;
+}
+a::after {
+  right: 0;
+  box-shadow: 100px 0 0 yellow;
+}
+
+a:hover::before {
+  left: 50%;
+  box-shadow: -30px 0 yellow;
+  transform: translate(-50%, -50%);
+}
+
+a:hover::after {
+  right: 50%;
+  box-shadow: 30px 0 yellow;
+  transform: translate(50%, -50%);
+}
