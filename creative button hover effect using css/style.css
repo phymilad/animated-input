@@ -1,0 +1,64 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: transparent;
+  color: white;
+  mix-blend-mode: multiply;
+  position: relative;
+  transition: all 0.2s;
+  border: none;
+}
+
+button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  background-color: #00ddff;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transform-origin: top;
+  transform: rotateX(0);
+  transition: all 0.2s;
+}
+
+button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: yellow;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transform-origin: bottom;
+  transform: rotateX(0);
+  transition: all 0.2s;
+}
+
+button:hover {
+  color: black;
+}
+
+button:hover::before {
+  left: 0;
+  transform: rotateX(65deg);
+}
+button:hover::after {
+  left: 0;
+  transform: rotateX(-65deg);
+}
