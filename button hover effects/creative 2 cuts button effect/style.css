@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+button {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button span {
+  color: #222;
+}
+button:hover span {
+  color: ;
+}
