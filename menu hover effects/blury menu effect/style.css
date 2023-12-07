@@ -1,0 +1,41 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+a {
+  width: 100px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 1rem;
+  padding: 1rem;
+  border-top-width: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+a:hover {
+  background-color: orange;
+  color: white;
+  transform: scale(1.25);
+}
+
+a:hover body {
+  filter: blur(4px);
+}
