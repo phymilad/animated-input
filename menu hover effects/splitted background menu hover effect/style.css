@@ -1,0 +1,113 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 1rem;
+  padding: 1rem;
+  border-top-width: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 1s;
+}
+
+a:hover {
+  color: white;
+}
+
+a::before {
+  content: "";
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #272727;
+  transform-origin: top;
+  z-index: -1;
+  transform: scaleY(0);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0;
+}
+
+a:hover::before {
+  transform: scaleY(1);
+}
+
+a::after {
+  content: "";
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  background-color: #272727;
+  transform-origin: top;
+  z-index: -1;
+  transform: scaleY(0);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.25s;
+}
+
+a:hover::after {
+  transform: scaleY(1);
+}
+
+span::before {
+  content: "";
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: #272727;
+  transform-origin: top;
+  z-index: -1;
+  transform: scaleY(0);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
+a:hover span::before {
+  transform: scaleY(1);
+}
+
+span::after {
+  content: "";
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 75%;
+  background-color: #272727;
+  transform-origin: top;
+  z-index: -1;
+  transform: scaleY(0);
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.75s;
+}
+
+a:hover span::after {
+  transform: scaleY(1);
+}
