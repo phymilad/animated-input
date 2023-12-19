@@ -1,0 +1,35 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+h1 {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+  margin-right: 1rem;
+}
+
+span:before {
+  content: "Transition";
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+  color: yellow;
+  animation: text 9s infinite;
+}
+
+@keyframes text {
+  0% {
+    content: "Transition";
+  }
+  50% {
+    content: "Transform";
+  }
+  100% {
+    content: "Animation";
+  }
+}
