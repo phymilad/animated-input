@@ -7,42 +7,49 @@ body {
 }
 
 .container {
-  width: 400px;
+  width: 150px;
+  height: 250px;
   position: relative;
-  overflow: hidden;
-  transition: all 0.75s;
 }
 
-img {
-  width: 100%;
-  transition: all 0.75s;
-}
-
-span {
+.card {
   width: 100%;
   height: 100%;
-  text-align: center;
+  border-radius: 1rem;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 400px;
-  color: white;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: all 0.75s;
+  transform-style: preserve-3d;
+  transition: all 1s;
+  background-color: green;
 }
 
-.container:hover {
+.container:hover .card {
+  transform: rotateY(180deg);
   cursor: pointer;
 }
 
-.container:hover img {
-  transform: rotate(25deg) scale(1.5);
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  background-color: green;
+  border-radius: 1rem;
+  color: black;
 }
-.container:hover span {
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 1;
-  font-size: 36px;
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  background-color: yellow;
+  color: black;
+  border-radius: 1rem;
+  transform: rotateY(180deg);
 }
